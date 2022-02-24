@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite" parallel="methods">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    </listeners>
+    <test name="GitHub Tests">
+        <classes>
+            <class name="GithubAPITests">
+                <methods>
+                    <include name="postRequest"/>
+                    <include name="getRequest"/>
+                    <include name="deleteRequest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
